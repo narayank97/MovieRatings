@@ -19,8 +19,20 @@ function search(){
         let object = JSON.parse(responseString);
         let JSONstring = JSON.stringify(object,undefined,3);
         document.getElementById("pic").src = object.Poster;
-        console.log(object.Poster);
         console.log(JSONstring);
+        console.log(object.Metascore);
+        let myImdb = object.Ratings[0].Value;
+        let rt = object.Ratings[1].Value;
+        let meta = object.Ratings[2].Value;
+
+        console.log("IMDB : "+object.Ratings[0].Value);
+        console.log("Rotten Tomatoes : "+object.Ratings[1].Value);
+        console.log("Metacritic : "+object.Ratings[2].Value);
+        
+        document.getElementById("imdb").innerText = myImdb;
+        document.getElementById("rt").innerText = rt;
+        document.getElementById("meta").innerText = meta;
+
     };
 
     xhr.onerror = function(){

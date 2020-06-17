@@ -1,9 +1,26 @@
 <html>
     <body>
         <h1>Netflix Ratings</h1>
-        <input id = "title" placeholder="Enter movie or tv show ..."></input>
-        <button onclick="search()">Enter</button>
-        <img id = "pic" src="">
+        <div>
+            <input id = "title" placeholder="Enter movie or tv show ..."></input>
+            <button onclick="search()">Enter</button>
+        </div>
+        <div>
+            <img id = "pic" src="">
+        </div>
+        <div>
+            <div> <img id = "imdbPic" src="./imdbLogo.png"> </div>
+            <div id="imdb"></div>
+        </div>
+        <div>
+            <div> <img id = "rtPic" src="./rtLogo.png"> </div>
+            <div id="rt"></div>
+        </div>
+        <div>
+            <div> <img id = "metaPic" src="./meta.png"> </div>
+            <div id="meta"></div>
+        </div>
+        
     </body>
     <script src="makeRequest.js"></script>
 </html>
